@@ -1,0 +1,237 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "calabozos de historia",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "por favor cancela la skill",
+                        "cancela esta skill",
+                        "cancela todo",
+                        "cancela esto",
+                        "cancelar"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help",
+                        "ayuda",
+                        "ayuda alexa",
+                        "ayuda por favor "
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "alto",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "jugadoresIntent",
+                    "slots": [
+                        {
+                            "name": "nombreuno",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "{nombreuno}",
+                                "mi nombres es {nombreuno}"
+                            ]
+                        },
+                        {
+                            "name": "nombredos",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "{nombredos}",
+                                "mi nombre es {nombredos}"
+                            ]
+                        },
+                        {
+                            "name": "nombretres",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "{nombretres}",
+                                "mi nombre  es {nombretres}"
+                            ]
+                        },
+                        {
+                            "name": "nombrecuatro",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "{nombrecuatro}",
+                                "mi nombre es {nombrecuatro}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "por supuesto",
+                        "si",
+                        "claro que si",
+                        "si claro",
+                        "comenzar juego"
+                    ]
+                },
+                {
+                    "name": "respuestaItent",
+                    "slots": [
+                        {
+                            "name": "respuesta",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "en el año {respuesta}",
+                        "don {respuesta}",
+                        "en {respuesta}",
+                        "es la {respuesta}",
+                        "fue el {respuesta}",
+                        "fue {respuesta}",
+                        "el {respuesta}",
+                        "es {respuesta}",
+                        "ya se es {respuesta}",
+                        "creo que es {respuesta}",
+                        "la respuesta es {respuesta}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "jugadoresIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "nombreuno",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.851241503554.589439506012"
+                            }
+                        },
+                        {
+                            "name": "nombredos",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.851241503554.1066095405148"
+                            }
+                        },
+                        {
+                            "name": "nombretres",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.851241503554.1321090648444"
+                            }
+                        },
+                        {
+                            "name": "nombrecuatro",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.851241503554.502202470734"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.851241503554.1103736495841",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Cuantos jugadores son?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.851241503554.589439506012",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Dame el nombre del retador uno"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.851241503554.1066095405148",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Dime el nombre del jugador dos"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.851241503554.1321090648444",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "dime el nombre del retador tres"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.851241503554.502202470734",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "dime el nombre del ultimo retador"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1198643947881.1436931345278",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "ey, ese nombre no existe, dime cual es tu verdadero nombre"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1198643947881.762131488611",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "ey, ese nombre no existe, dime tu verdadero nombre"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1198643947881.968524158481",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "ey, ese nombre no existe, dime tu verdadero nombre"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1198643947881.1027725480872",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "ey, ese nombre no existe, dime tu verdadero nombre"
+                    }
+                ]
+            }
+        ]
+    }
+}
